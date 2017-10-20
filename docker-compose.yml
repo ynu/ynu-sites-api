@@ -1,0 +1,9 @@
+version: '2'
+services:
+  ynu-sites-api:
+    build: .
+    ports:
+      - "50081:3000"
+    restart: always
+    env_file:
+      - ./.env
