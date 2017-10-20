@@ -1,0 +1,56 @@
+{
+  "name": "wbnews",
+  "plural": "wbnews",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "wbnewsid": {
+      "type": "number",
+      "id": true
+    },
+    "owner": {
+      "type": "number",
+      "required": true
+    },
+    "wbsysuserid": {
+      "type": "number",
+      "required": true
+    },
+    "wbtreeid": {
+      "type": "number",
+      "required": true
+    },
+    "wbtitle": {
+      "type": "string",
+      "required": true
+    },
+    "wblinkurl": {
+      "type": "string",
+      "required": true
+    },
+    "wbdate": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

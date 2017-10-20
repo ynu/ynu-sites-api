@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "sites": {
+    "host": "113.55.12.160",
+    "port": 3306,
+    "url": "",
+    "database": "sites",
+    "password": "sites@ynu",
+    "name": "sites",
+    "user": "sites",
+    "connector": "mysql"
+  }
+}
