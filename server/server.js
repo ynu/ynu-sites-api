@@ -13,6 +13,13 @@ app.use(loopback.token({
 }));
 
 app.start = function() {
+  // catch err of jwt.js and return readable message
+  app.use(function(err, req, res, next) {
+    if (err.name == 'JsonWebTokenError') {
+      return res.status(401).send({error: err});
+    }
+    next(err);
+  });
   // start the web server
   return app.listen(function() {
     app.emit('started');
