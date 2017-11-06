@@ -1,5 +1,5 @@
 var server = require('./server');
-var ds = server.dataSources.sites;
+var ds = server.dataSources.admin;
 var lbTables = ['admin'];
 ds.automigrate(lbTables, function(er) {
   if (er) throw er;

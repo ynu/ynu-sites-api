@@ -9,7 +9,8 @@ module.exports = function(app) {
   User.prototype.createAccessToken = function(ttl, cb) {
     const userSettings = this.constructor.settings;
     const expiresIn = Math.min(ttl || userSettings.ttl, userSettings.maxTTL);
-    const accessToken = jwt.sign({id: this.id}, secretKey, {expiresIn});
+    // https://stackoverflow.com/questions/45207104/how-to-set-jwt-token-expiry-time-to-maximum-in-nodejs
+    const accessToken = jwt.sign({id: this.id}, secretKey);
     return cb ? cb(null, Object.assign(this, {accessToken})) : {id: accessToken};
   };
 

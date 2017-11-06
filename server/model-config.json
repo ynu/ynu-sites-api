@@ -37,7 +37,7 @@
     "public": false
   },
   "admin": {
-    "dataSource": "sites",
+    "dataSource": "admin",
     "public": true
   },
   "wbsysuser": {

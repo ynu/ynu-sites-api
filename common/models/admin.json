@@ -2,7 +2,11 @@
   "name": "admin",
   "base": "User",
   "idInjection": true,
-  "properties": {},
+  "properties": {
+    "scope": {
+      "type": "string"
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [

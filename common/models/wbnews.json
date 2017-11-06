@@ -48,7 +48,7 @@
     {
       "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "sites",
       "permission": "ALLOW"
     }
   ],

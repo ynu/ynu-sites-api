@@ -11,5 +11,14 @@
     "user": "root",
     "password": "",
     "connector": "mysql"
+  },
+  "admin": {
+    "name": "admin",
+    "host": "localhost",
+    "port": 3306,
+    "database": "admin",
+    "user": "root",
+    "password": "",
+    "connector": "mysql"
   }
 }
